@@ -26,7 +26,7 @@ Template.map.events
       name: randomName()
 
     Session.set("selected", _id)
-  "click .map":
+  "click .map": ->
     Session.set("selected", null)
 
 

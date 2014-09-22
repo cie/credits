@@ -11,6 +11,7 @@ Template.account.helpers
 Template.account.events
   "click .account": (e,tpl) ->
     Session.set("selected", @_id)
+    false
 
 Interactions.hover(Template.account, ".account")
 
