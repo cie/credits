@@ -1,0 +1,16 @@
+
+<template name="map">
+    <svg class="map" data-mode="{{mode}}" data-drag={{dragging}}>
+        <g transform="translate({{translate}})scale({{scale}})" class="canvas">
+            {{#each accounts}}
+                {{>account}}
+            {{/each}}
+
+            {{#each transactions}}
+                {{>transaction}}
+            {{/each}}
+        </g>
+    </svg>
+</template>
+
+

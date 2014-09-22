@@ -1,0 +1,35 @@
+
+<template name="account">
+    <g transform="translate({{x}},{{y}})" class="account {{selected}}">
+        {{>popup}}
+        {{>accountIcon}}
+        {{>accountBalance}}
+        {{>accountName}}
+        {{>marker}}
+    </g>
+</template>
+
+<template name="accountIcon">
+    {{#if positive}}
+        <path d="M-5 -5C-5 0 -5 5 0 5C5 5 5 0 5 -5Z" class="icon" transform="scale({{iconScale}})" fill="{{color}}"/>
+    {{/if}}
+    {{#if negative}}
+        <path d="M-5 -5C-5 0 -5 5 0 5C5 5 5 0 5 -5Z" class="icon" transform="scale({{iconScale}},-{{iconScale}})" fill="{{color}}"/>
+    {{/if}}
+    {{#if zero}}
+        <path d="M-5 -5C-5 0 -5 5 0 5C5 5 5 0 5 -5Z" class="icon" transform="scale({{iconScale}})" fill="{{color}}"/>
+    {{/if}}
+</template>
+
+<template name="accountBalance">
+    <text x=0 y=0 text-anchor=middle dy=0.5ex class="balance">
+        {{balance}}
+    </text>
+</template>
+
+
+<template name="accountName">
+    <text x=0 y=9 text-anchor=middle dy=0.5ex class="name">
+        {{name}}
+    </text>
+</template>
