@@ -2,6 +2,9 @@
 <template name="map">
     <svg class="map" data-mode="{{mode}}" data-drag={{dragging}}>
         <g transform="translate({{translate}})scale({{scale}})" class="canvas">
+            {{#if transactionDrag}}
+                <path class="transactionDrag" d="M{{transactionDragSource.[0]}} {{transactionDragSource.[1]}}L{{transactionDrag.[0]}} {{transactionDrag.[1]}}" />
+            {{/if}}
             {{#each accounts}}
                 {{>account}}
             {{/each}}

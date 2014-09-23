@@ -1,0 +1,16 @@
+<template name="editAccount">
+    {{#with account}}
+        <div class="editAccount">
+            <svg width="50" height="50" class="icon">
+                <g transform="translate(25,25)scale(4)">
+                    {{>accountIcon}}
+                </g>
+            </svg>
+
+            <h1><span class="name">{{name}}</span>&nbsp;</h1>
+            <p class="balance"><span class="sum">{{balance}}</span> <span class="currency">{{currency}}</span></p>
+            <nav class="buttons"><a class="btn btn-default" on-click="closePopup">Bezár</a></nav>
+        </div>
+    {{/with}}
+
+</template>

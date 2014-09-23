@@ -9,4 +9,5 @@ less
 insecure
 autopublish
 d3
+iron:router
 

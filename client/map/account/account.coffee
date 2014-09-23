@@ -12,6 +12,17 @@ Template.account.events
   "click .account": (e,tpl) ->
     Session.set("selected", @_id)
     false
+  "dblclick .account": ->
+    Router.go("account", _id: @_id)
+    false
+
+Template.account.events
+  "mouseover .account": (e,tpl)->
+    d3.select(e.currentTarget).classed("hover", true)
+    Session.set("hovered", @_id)
+  "mouseout .account": (e,tpl)->
+    d3.select(e.currentTarget).classed("hover", false)
+    Session.set("hovered", null)
 
 Interactions.hover(Template.account, ".account")
 

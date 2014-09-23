@@ -1,16 +1,20 @@
 
-.account {
-  fill: #bca35f;
+.accountIcon {
   stroke: black;
   stroke-width: 0.7;
+}
+.account {
+  fill: #bca35f;
+  
   -webkit-filter: drop-shadow(2px);
   filter: drop-shadow(2px);
+  cursor: pointer;
   >.balance {
     stroke: gray;
     stroke-width: 0.1;
     fill: black;
     font-size: 8px;
-    cursor: default;
+    cursor: inherit;
   }
 
   &.dragging {
