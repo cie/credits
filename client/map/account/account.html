@@ -1,7 +1,7 @@
 
 <template name="account">
     <g transform="translate({{x}},{{y}})" class="account {{selected}}">
-        {{>accountIcon}}
+        {{>accountIcon scale=iconScale reverse=negative strokeWidth=0.7 color=color}}
         {{>accountBalance}}
         {{>accountName}}
         {{>marker}}
@@ -9,15 +9,7 @@
 </template>
 
 <template name="accountIcon">
-    {{#if positive}}
-        <path d="M-5 -5C-5 0 -5 5 0 5C5 5 5 0 5 -5Z" class="accountIcon" transform="scale({{iconScale}})" fill="{{color}}"/>
-    {{/if}}
-    {{#if negative}}
-        <path d="M-5 -5C-5 0 -5 5 0 5C5 5 5 0 5 -5Z" class="accountIcon" transform="scale({{iconScale}},-{{iconScale}})" fill="{{color}}"/>
-    {{/if}}
-    {{#if zero}}
-        <path d="M-5 -5C-5 0 -5 5 0 5C5 5 5 0 5 -5Z" class="accountIcon" transform="scale({{iconScale}})" fill="{{color}}"/>
-    {{/if}}
+    <path d="M-5 -5C-5 0 -5 5 0 5C5 5 5 0 5 -5Z" class="accountIcon" transform="scale({{xScale}},{{yScale}})" fill="{{color}}" stroke-width="{{strokeWidth}}"/>
 </template>
 
 <template name="accountBalance">

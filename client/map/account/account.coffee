@@ -1,12 +1,16 @@
 Template.accountIcon.helpers
-  positive: -> @balance > 0
-  negative: -> @balance < 0
-  zero: -> @balance is 0 || !@balance # FIXME remove the ||... part 
-  iconScale: -> 1 + Math.log(Math.max(1, Math.abs(@balance))) * 0.2
+  xScale: -> @scale
+  yScale: -> if @reverse then -@scale else @scale
+  strokeWidth: -> @strokeWidth / @scale
+  negate: (x, b) -> if b then -x else x
+  divide: (a, b) -> console.log(@);a/b
+
 
 Template.account.helpers
   selected: -> "selected" if Session.equals("selected", @_id)
   balance: -> @balance || 0
+  negative: -> @balance < 0
+  iconScale: -> 1 + Math.log(Math.max(1, Math.abs(@balance))) * 0.2
 
 Template.account.events
   "click .account": (e,tpl) ->
@@ -24,7 +28,6 @@ Template.account.events
     d3.select(e.currentTarget).classed("hover", false)
     Session.set("hovered", null)
 
-Interactions.hover(Template.account, ".account")
 
 Template.account.rendered = ->
   d3.select(@firstNode).call d3.behavior.drag().on("drag", =>

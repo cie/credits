@@ -14,4 +14,3 @@ Template.marker.rendered = ->
     Session.set("transactionDrag", null)
   )
 
-Interactions.hover(Template.marker, ".marker")
