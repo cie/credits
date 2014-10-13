@@ -9,5 +9,8 @@ less
 insecure
 autopublish
 d3
-iron:router
+iron:router@=1.0.0-pre3
+tap:i18n
+accounts-ui
+accounts-password
 
