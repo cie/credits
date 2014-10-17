@@ -17,7 +17,7 @@ Template.account.events
     Session.set("selected", @_id)
     false
   "dblclick .account": ->
-    Router.go("account", _id: @_id)
+    Router.go("account.show", _id: @_id)
     false
 
 Template.account.events

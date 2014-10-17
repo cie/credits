@@ -1,2 +1,7 @@
 {
+  "account.new.name": "New account"
+  ,"button.close": "Close"
+  ,"help.createAccount": "Double-click on the map to create an account"
+  ,"welcome.title": "Welcome to Credit!"
+  ,"welcome.description": "Please sign up!"
 }

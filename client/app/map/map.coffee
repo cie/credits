@@ -27,11 +27,12 @@ Template.map.events
       name: randomName()
 
     Session.set("selected", _id)
-    Router.go("account", _id:_id)
+    Router.go("account.show", _id:_id)
   "click .map": ->
     Session.set("selected", null)
 
 
 randomLetters="qwertzuiopasdfghjklyxcvbnmáéabcdefghijklmnopqrstuvwxyztátátétatatututirororururararirihihihahahohohuhuhühü"
 randomName = ->
-  randomLetters.substr(Math.random()*(randomLetters.length-5), 5)
+  _("account.new.name")
+  #randomLetters.substr(Math.random()*(randomLetters.length-5), 5)
