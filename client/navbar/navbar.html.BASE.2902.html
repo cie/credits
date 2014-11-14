@@ -1,0 +1,34 @@
+<template name="navbar">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header" data-toggle="collapse" data-target="#navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">Credit</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="navbar-form navbar-right">
+                {{>loginButtons align="right"}}
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    {{#with language}}
+                        <a href="" data-toggle="dropdown"><img width=16 height=16 src="/flags/{{id}}.svg"/> {{name}} <span class="caret"></span></a>
+                    {{/with}}
+                    <ul class="dropdown-menu">
+                        {{#each languages}}
+                            <li class="language"><a href="" data-select-language><img width=16 height=16 src="/flags/{{id}}.svg"/> {{name}}</a></li>
+                        {{/each}}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+</template>

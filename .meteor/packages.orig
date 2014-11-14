@@ -13,7 +13,10 @@ tap:i18n
 accounts-ui
 accounts-password
 accounts-facebook
-iron:router
+<<<<<<< HEAD
+iron:router@1.0.0-pre4
 ian:bootstrap-3
+=======
 mquandalle:jade
+>>>>>>> origin/master
 
