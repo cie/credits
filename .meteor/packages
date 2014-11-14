@@ -9,8 +9,10 @@ less
 insecure
 autopublish
 d3
-iron:router@=1.0.0-pre3
 tap:i18n
 accounts-ui
 accounts-password
 accounts-facebook
+iron:router@1.0.0-pre4
+ian:bootstrap-3
+

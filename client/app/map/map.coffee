@@ -34,5 +34,5 @@ Template.map.events
 
 randomLetters="qwertzuiopasdfghjklyxcvbnmáéabcdefghijklmnopqrstuvwxyztátátétatatututirororururararirihihihahahohohuhuhühü"
 randomName = ->
-  _("account.new.name")
+  _("account_new_name")
   #randomLetters.substr(Math.random()*(randomLetters.length-5), 5)

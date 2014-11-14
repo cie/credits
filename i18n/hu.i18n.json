@@ -1,7 +1,9 @@
 {
-  "account.new.name": "Új számla"
-  ,"button.close": "Bezár"
-  ,"help.createAccount": "Kattints duplán a térképre egy számla létrehozásához"
-  ,"welcome.title": "Helló!"
-  ,"welcome.description": "Üdvözlünk a Credit programban!"
+  "____": "____"
+  ,"account_new_name": "Új számla"
+  ,"app_name": "Credito"
+  ,"button_close": "Bezár"
+  ,"help_createAccount": "Kattints duplán a térképre egy számla létrehozásához"
+  ,"welcome_description": "Üdvözöl a Credito!"
+  ,"welcome_title": "Helló!"
 }
