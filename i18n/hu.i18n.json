@@ -6,4 +6,8 @@
   ,"help_createAccount": "Kattints duplán a térképre egy számla létrehozásához"
   ,"welcome_description": "Üdvözöl a Credits!"
   ,"welcome_title": "Helló!"
+  ,"user_name": "Felhasználónév"
+  ,"password": "Jelszó"
+  ,"email": "Email cím"
+  ,"user_name_or_email": "Felhasználónév vagy email"
 }

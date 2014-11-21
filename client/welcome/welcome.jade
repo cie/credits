@@ -1,0 +1,59 @@
+template(name="welcome")
+  +navbar
+  .welcome
+    .container
+      .jumbotron
+        .col-md-6
+          h1 {{_ "welcome_title"}}
+          p {{_ "welcome_description"}}
+        .col-md-6
+          +welcomeForm
+          
+
+template(name="welcomeForm")
+  .welcomeForm(role="tabpanel")
+    ul.nav.nav-pills(role="tablist")
+      li.active(role="presentation")
+        a(href="#signup" data-toggle="tab") Sign up
+      li(role="presentation")
+        a(href="#login" data-toggle="tab") Log in
+    .tab-content
+      .well.tab-pane.active#signup
+        +welcomeSignup
+      .well.tab-pane#login
+        +welcomeLogin
+
+              
+template(name="welcomeSignup")
+  form
+    h2 {{_ "welcome_signup_with_facebook"}}
+    .form-group
+      input#welcomeSignupFacebookProfilePicture(type="checkbox" checked)
+      label(for="welcomeSignupFacebookProfilePicture") {{_ "welcome_signup_connect_profile_picture"}}
+    .form-group
+      input#welcomeSignupFacebookFriendlist(type="checkbox" checked)
+      label(for="welcomeSignupFacebookFriendlist") {{_ "welcome_signup_connect_friend_list"}}
+    button
+      {{_ "connect_with_facebook"}}
+    //
+      h2 {{_ "welcome_signup_with_password"}}
+      .form-group
+        label {{_ "user_name"}}
+        input.form-control(type="text")
+      .form-group
+        label {{_ "email"}}
+        input.form-control(type="email")
+      .form-group
+        label {{_ "password"}}
+        input.form-control(type="password")
+      
+      
+template(name="welcomeLogin")
+  form
+    .form-group
+      label {{_ "user_name_or_email"}}
+      input.form-control(type="text")
+    .form-group
+      label {{_ "password"}}
+      input.form-control(type="password")
+      
